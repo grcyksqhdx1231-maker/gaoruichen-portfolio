@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Gao Ruichen — Portfolio A (Visual / Brand / Narrative)</title>
+  <style>
+    :root {
+      --bg:#0b0f14; --card:#101826; --text:#e8eef7; --muted:#a7b3c6;
+      --accent:#7CFF76; --border: rgba(255,255,255,.12);
+    }
+    html,body{margin:0;height:100%;background:var(--bg);color:var(--text);font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Arial, "PingFang SC","Microsoft YaHei";}
+    .wrap{max-width:1100px;margin:0 auto;padding:24px 16px 32px;}
+    .top{display:flex;gap:12px;align-items:flex-end;justify-content:space-between;flex-wrap:wrap;margin-bottom:14px;}
+    h1{margin:0;font-size:18px;letter-spacing:.2px;}
+    .sub{color:var(--muted);font-size:13px;line-height:1.4;margin-top:6px;}
+    .btns{display:flex;gap:10px;flex-wrap:wrap;}
+    a.btn{text-decoration:none;color:var(--text);border:1px solid var(--border);background:rgba(16,24,38,.65);padding:10px 12px;border-radius:12px;font-size:13px;display:inline-flex;gap:8px;align-items:center;}
+    a.btn:hover{border-color:rgba(124,255,118,.55);}
+    .frame{border:1px solid var(--border);border-radius:16px;overflow:hidden;background:var(--card);box-shadow: 0 18px 60px rgba(0,0,0,.45);}
+    .embed{width:100%;height: calc(100vh - 170px); min-height:620px; border:0; background:#0b0f14;}
+    .tip{color:var(--muted);font-size:12px;margin-top:10px;}
+    .accent{color:var(--accent);}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="top">
+      <div>
+        <h1>Gao Ruichen — Portfolio A (Visual / Brand / Narrative)</h1>
+        <div class="sub">主投：小红书创新体验 / 爱奇艺广告视觉｜点击即可在线浏览与下载。</div>
+      </div>
+      <div class="btns">
+        <a class="btn" href="portfolio_A.pdf" download>⬇️ 下载 PDF</a>
+        <a class="btn" href="index.html">🏠 返回索引</a>
+      </div>
+    </div>
+
+    <div class="frame">
+      <embed class="embed" src="portfolio_A.pdf" type="application/pdf" />
+    </div>
+    <div class="tip">如遇到浏览器不显示 PDF：请点击上方 <span class="accent">下载 PDF</span>，或用 Chrome / Edge 打开。</div>
+  </div>
+</body>
+</html>
