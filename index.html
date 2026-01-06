@@ -10,19 +10,16 @@
   font-family: "Alibaba PuHuiTi";
   src: url("https://assets-persist.lovart.ai/agent-static-assets/Alibaba-PuHuiTi-Regular.otf");
   font-weight: 400;
-  font-display: swap;
 }
 @font-face {
   font-family: "Alibaba PuHuiTi";
   src: url("https://assets-persist.lovart.ai/agent-static-assets/Alibaba-PuHuiTi-Medium.otf");
   font-weight: 500;
-  font-display: swap;
 }
 @font-face {
   font-family: "Alibaba PuHuiTi";
   src: url("https://assets-persist.lovart.ai/agent-static-assets/Alibaba-PuHuiTi-Bold.otf");
   font-weight: 700;
-  font-display: swap;
 }
 
 :root{
@@ -44,14 +41,13 @@ body{
   padding:18px;
 }
 
-/* ===== A4 fixed canvas ===== */
 .resume-container{
   width:794px;
   height:1123px;
   background:#fff;
   display:flex;
   overflow:hidden;
-  box-shadow: 0 10px 25px -5px rgba(0,0,0,.10), 0 8px 10px -6px rgba(0,0,0,.10);
+  box-shadow:0 10px 25px rgba(0,0,0,.12);
 }
 
 /* ===== Columns ===== */
@@ -69,30 +65,27 @@ body{
   padding:40px 38px;
   display:flex;
   flex-direction:column;
-  gap:20px;
+  gap:22px;
 }
 
-/* ===== Profile Photo ===== */
+/* ===== Photo ===== */
 .photo-wrapper{
-  width:100%;
   display:flex;
   justify-content:center;
-  margin-bottom:10px;
 }
 .profile-photo{
   width:118px;
   height:158px;
   object-fit:cover;
   border-radius:10px;
-  border:2px solid rgba(255,255,255,0.35);
-  background:#fff;
+  border:2px solid rgba(255,255,255,.35);
 }
 
 /* ===== Sidebar ===== */
 .sidebar-section h3{
   font-size:13px;
   color:var(--accent);
-  letter-spacing:1.6px;
+  letter-spacing:1.5px;
   margin-bottom:10px;
   border-bottom:1px solid rgba(45,212,191,.3);
   padding-bottom:7px;
@@ -103,31 +96,37 @@ body{
   font-size:11.5px;
   line-height:1.5;
 }
-.contact-item i{color:var(--accent); font-size:15px; margin-top:1px;}
+.contact-item i{color:var(--accent);font-size:15px;}
+.contact-item a{
+  color:var(--sidebar-text);
+  text-decoration:none;
+  border-bottom:1px dotted rgba(255,255,255,.4);
+}
+.contact-item a:hover{border-bottom-style:solid}
+
 .skill-label{font-size:11.5px;font-weight:700;margin-top:8px}
-.skill-label:first-of-type{margin-top:0}
 .skill-tags{font-size:11.5px;color:var(--sidebar-sub);line-height:1.55}
-.lang-item{font-size:11.5px;display:flex;justify-content:space-between;line-height:1.6}
+.lang-item{font-size:11.5px;display:flex;justify-content:space-between}
 
 /* ===== Header ===== */
 .header-section{
   border-bottom:2px solid var(--border);
   padding-bottom:14px;
 }
-h1{font-size:31px;color:#111; line-height:1.15; letter-spacing:-0.2px;}
-.job-title{font-size:15px;color:var(--accent-dark); margin-top:4px;}
-.job-title-en{font-size:13px;color:#6B7280; margin-top:2px;}
+h1{font-size:31px;color:#111;}
+.job-title{font-size:15px;color:var(--accent-dark)}
+.job-title-en{font-size:13px;color:#6B7280}
+
 .availability-badge{
   margin-top:10px;
   font-size:11.5px;
   padding:6px 10px;
   background:#F0FDFA;
   border:1px solid #CCFBF1;
-  color:var(--accent-dark);
   border-radius:8px;
   display:inline-flex;
-  align-items:center;
   gap:6px;
+  color:var(--accent-dark);
 }
 
 /* ===== Section ===== */
@@ -136,7 +135,6 @@ h1{font-size:31px;color:#111; line-height:1.15; letter-spacing:-0.2px;}
   font-weight:700;
   display:flex;
   gap:9px;
-  margin-bottom:8px;
   color:#111827;
 }
 .main-section-title::before{
@@ -144,92 +142,42 @@ h1{font-size:31px;color:#111; line-height:1.15; letter-spacing:-0.2px;}
   width:3px;height:16px;
   background:var(--accent);
   border-radius:2px;
-  margin-top:2px;
 }
 
-.profile-content{
-  font-size:11.5px;
-  line-height:1.72;
-  color:var(--main-text);
-  text-align:justify;
+/* ===== Portfolio Buttons ===== */
+.portfolio-buttons{
+  display:flex;
+  gap:16px;
+  margin-top:10px;
 }
-.profile-content-en{
+.portfolio-btn{
+  flex:1;
+  padding:14px 16px;
+  border:1.5px solid var(--accent);
+  border-radius:10px;
+  text-decoration:none;
+  color:#0F766E;
+  font-weight:600;
+  font-size:13.5px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  transition:.2s;
+}
+.portfolio-btn:hover{
+  background:#F0FDFA;
+  transform:translateY(-1px);
+}
+.portfolio-btn span{
   font-size:11px;
   color:#6B7280;
-  font-style:italic;
-  margin-top:7px;
-  line-height:1.6;
-}
-
-/* ===== Two-column grid ===== */
-.grid-row{
-  display:grid;
-  grid-template-columns: 1.05fr 0.95fr;
-  gap:26px;
-}
-
-/* ===== Lists ===== */
-.strength-item{
-  font-size:11.5px;
-  line-height:1.55;
-  color:var(--main-text);
-  display:flex;
-  align-items:flex-start;
-  gap:8px;
-}
-.strength-item::before{
-  content:"•";
-  color:var(--accent-dark);
-  font-weight:700;
-  margin-top:1px;
-}
-
-.project-entry{margin-bottom:12px}
-.project-name{font-size:13.5px;font-weight:700;color:#1F2937}
-.project-sub{font-size:11.5px;color:#6B7280;margin-top:2px;margin-bottom:6px}
-.project-details{list-style:none}
-.project-details li{
-  font-size:11.5px;
-  line-height:1.55;
-  padding-left:12px;
-  position:relative;
-  color:var(--main-text);
-  margin-bottom:2px;
-}
-.project-details li::before{
-  content:"-";
-  position:absolute;
-  left:0;
-  color:#9CA3AF;
-}
-
-.edu-school{font-size:13.5px;font-weight:700;color:#1F2937}
-.edu-info{
-  font-size:11.5px;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  color:#4B5563;
-  line-height:1.55;
-  margin-top:2px;
-}
-.date-pill{
-  font-size:10.5px;
-  background:#F3F4F6;
-  padding:2px 7px;
-  border-radius:6px;
-  white-space:nowrap;
 }
 
 /* ===== Print ===== */
 @page{size:A4;margin:0}
 @media print{
   body{background:#fff;padding:0}
-  .resume-container{
-    width:210mm;
-    height:297mm;
-    box-shadow:none;
-  }
+  .resume-container{box-shadow:none;width:210mm;height:297mm}
   *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
 }
 </style>
@@ -238,143 +186,53 @@ h1{font-size:31px;color:#111; line-height:1.15; letter-spacing:-0.2px;}
 <body>
 <div class="resume-container">
 
-  <!-- LEFT -->
-  <div class="left-column">
+<!-- LEFT -->
+<div class="left-column">
+  <div class="photo-wrapper">
+    <img src="微信图片_20250825214303.jpg" class="profile-photo">
+  </div>
 
-    <!-- Photo -->
-    <div class="photo-wrapper">
-      <img src="微信图片_20250825214303.jpg" alt="Gao Ruichen Portrait" class="profile-photo">
+  <div class="sidebar-section">
+    <h3>CONTACT</h3>
+    <div class="contact-item"><i class="ri-map-pin-line"></i>上海 ｜ Shanghai</div>
+    <div class="contact-item"><i class="ri-phone-line"></i>182-2088-8468</div>
+    <div class="contact-item"><i class="ri-mail-line"></i>258742694@qq.com</div>
+    <div class="contact-item">
+      <i class="ri-links-line"></i>
+      <a href="portfolio_A.html" target="_blank">Portfolio</a>
     </div>
+  </div>
+</div>
 
-    <div class="sidebar-section">
-      <h3>CONTACT</h3>
-      <div class="contact-item"><i class="ri-map-pin-line"></i><span>上海 ｜ Shanghai</span></div>
-      <div class="contact-item"><i class="ri-phone-line"></i><span>182-2088-8468</span></div>
-      <div class="contact-item"><i class="ri-mail-line"></i><span>258742694@qq.com</span></div>
-      <div class="contact-item"><i class="ri-links-line"></i><span>Portfolio Link</span></div>
-    </div>
+<!-- RIGHT -->
+<div class="right-column">
 
-    <div class="sidebar-section">
-      <h3>SKILLS</h3>
-      <div class="skill-label">视觉 / Visual</div>
-      <div class="skill-tags">Figma, Photoshop, Illustrator, Procreate, 剪映 CapCut</div>
-
-      <div class="skill-label">三维 / 3D & Spatial</div>
-      <div class="skill-tags">Rhino, SketchUp, CAD, Grasshopper, Nomad</div>
-
-      <div class="skill-label">渲染 / Rendering</div>
-      <div class="skill-tags">Enscape, V-Ray, D5</div>
-
-      <div class="skill-label">交互 & 动效 / Interactive</div>
-      <div class="skill-tags">TouchDesigner (基础), After Effects (基础)</div>
-
-      <div class="skill-label">AI / Generative Tools</div>
-      <div class="skill-tags">ChatGPT, Gemini, Midjourney, 即梦视频, Lovart</div>
-    </div>
-
-    <div class="sidebar-section">
-      <h3>LANG</h3>
-      <div class="lang-item"><span>中文 (Chinese)</span><span>Native</span></div>
-      <div class="lang-item"><span>English</span><span>IELTS 6.0</span></div>
+  <div class="header-section">
+    <h1>高瑞晨 Gao Ruichen</h1>
+    <div class="job-title">创新体验 / 视觉设计 实习生</div>
+    <div class="job-title-en">Innovation Experience / Visual Design Intern</div>
+    <div class="availability-badge">
+      <i class="ri-calendar-check-line"></i>
+      Available from Jan 12 ｜ 4–5 days/week ｜ 3 months
     </div>
   </div>
 
-  <!-- RIGHT -->
-  <div class="right-column">
-
-    <div class="header-section">
-      <h1>高瑞晨 Gao Ruichen</h1>
-      <div class="job-title">创新体验 / 视觉设计 实习生</div>
-      <div class="job-title-en">Innovation Experience / Visual Design Intern</div>
-      <div class="availability-badge">
-        <i class="ri-calendar-check-line"></i>
-        Available from Jan 12 ｜ 4–5 days/week ｜ 3 months
-      </div>
+  <!-- ⭐ Portfolio Entry -->
+  <div>
+    <div class="main-section-title">作品集入口 ｜ Portfolio</div>
+    <div class="portfolio-buttons">
+      <a class="portfolio-btn" href="portfolio_A.html" target="_blank">
+        研究生作品集
+        <span>Graduate Portfolio</span>
+      </a>
+      <a class="portfolio-btn" href="portfolio_B.html" target="_blank">
+        本科作品集
+        <span>Undergraduate Portfolio</span>
+      </a>
     </div>
-
-    <div>
-      <div class="main-section-title">个人定位 ｜ Profile</div>
-      <div class="profile-content">
-        建筑学背景转向视觉与内容设计的创意型设计实习生，擅长以视觉叙事与系统化表达构建具有传播力的内容体验。在项目中关注画面节奏、情绪表达与多媒介延展，具备将概念转译为 KV / 插画体系 / 动效与影像潜力方案的能力，期望在创新体验、广告视觉与内容设计方向持续深入。
-      </div>
-      <div class="profile-content-en">
-        Design intern transitioning from Architecture to visual and experience design. Strong in narrative-driven visuals, key visual development, and multi-media storytelling. Interested in animation, MV, and brand visual planning, with a focus on emotionally engaging content.
-      </div>
-    </div>
-
-    <div class="grid-row">
-      <div>
-        <div class="main-section-title">核心能力 ｜ Key Strengths</div>
-        <div class="strength-item">视觉叙事与内容构建 / Visual storytelling & narrative design</div>
-        <div class="strength-item">品牌/项目视觉系统搭建 / Key visual & visual system development</div>
-        <div class="strength-item">插画风格探索与画面表达 / Illustration & style exploration</div>
-        <div class="strength-item">空间感知与跨媒介转译能力 / Spatial thinking & cross-media translation</div>
-        <div class="strength-item">AI辅助创作与实验 / AI-assisted creative exploration</div>
-      </div>
-
-      <div>
-        <div class="main-section-title">教育背景 ｜ Education</div>
-        <div class="edu-school">同济大学 上海国际设计创新学院</div>
-        <div class="edu-info">
-          <span>硕士(在读) ｜ M.S. in Media & Communication</span>
-          <span class="date-pill">2025.09 – Present</span>
-        </div>
-
-        <div style="height:10px;"></div>
-
-        <div class="edu-school">湖南大学</div>
-        <div class="edu-info">
-          <span>建筑学 本科 ｜ Bachelor of Architecture</span>
-          <span class="date-pill">2020.09 – 2025.03</span>
-        </div>
-      </div>
-    </div>
-
-    <div>
-      <div class="main-section-title">项目经历 ｜ Selected Projects</div>
-
-      <div class="project-entry">
-        <div class="project-name">文化视觉叙事与视觉系统构建项目</div>
-        <div class="project-sub">Cultural Narrative Visual System Project</div>
-        <ul class="project-details">
-          <li>提取文化符号与视觉元素，构建统一的视觉语言体系</li>
-          <li>完成核心视觉(KV)、插画角色与应用延展设计</li>
-          <li>探索从静态视觉向动效/影像/MV场景化叙事的延展可能</li>
-        </ul>
-      </div>
-
-      <div class="project-entry">
-        <div class="project-name">East Asian Urban Workshop ｜ 城市与叙事表达</div>
-        <ul class="project-details">
-          <li>参与城市感知与调研，负责短片视觉叙事、拍摄和剪辑</li>
-        </ul>
-      </div>
-
-      <div class="project-entry" style="margin-bottom:0;">
-        <div class="project-name">大学生创新训练计划 (省级)</div>
-        <div class="project-sub">Student Innovation Training Program (Provincial-level)</div>
-        <ul class="project-details">
-          <li>参与建筑项目概念生成和方案表达</li>
-          <li>负责周边物料设计和宣传设计 (项目已落地)</li>
-        </ul>
-      </div>
-    </div>
-
-    <div>
-      <div class="main-section-title">实习经历 ｜ Internship Experience</div>
-      <div class="project-name">
-        中国联合工程有限公司 (CUCEC)
-        <span class="date-pill" style="margin-left:6px;">2023 Summer</span>
-      </div>
-      <div class="project-sub">建筑设计实习生 ｜ Architectural Design Intern</div>
-      <ul class="project-details">
-        <li>协助完成建筑方案建模与制图 (CAD / SU / Enscape)</li>
-        <li>参与多专业协作流程，保障设计成果按期交付</li>
-        <li>在实践中强化空间逻辑与设计表达能力</li>
-      </ul>
-    </div>
-
   </div>
+
+</div>
 </div>
 </body>
 </html>
